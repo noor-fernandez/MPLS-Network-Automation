@@ -1,0 +1,16 @@
+enable LDP on the routers and switches
+R1 commands
+enable
+conf t
+router ospf 1
+mpls ldp autoconfig
+end
+sh mpls interfaces
+R2 commands
+enable
+conf t
+router ospf 1
+mpls ldp autoconfig
+end
+sh mpls interfaces
+sh mpls ldp neighbors

@@ -1,0 +1,31 @@
+#first enable traffic engineering tunnels on R1, R2, R3, R6
+conf t
+mpls traffic-eng tunnels
+
+#then for every interface in f0/0, ...
+int f0/0
+mpls traffic-eng tunnels
+ip rsvp bandwidth 50000
+for one side (R1-R6-R3)
+ip rsvp bandwidth 90000
+for one side (R1-R2-R3)
+exit
+#you are in global config again
+router ospf 1
+mpls traffic-eng area 0
+mpls traffic-eng router-id Loopback0
+
+#THIS CONFIGURATION IS FOR R1 ONLY!
+interface Tunnel0
+ip unnumbered Loopback0
+tunnel destination 3.3.3.3
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng autoroute announce
+tunnel mpls traffic-eng priority 4 4
+tunnel mpls traffic-eng path-option 1 dynamic
+tunnel mpls traffic-eng path-option 2 explicit name R1-R2-R3
+tunnel mpls traffic-eng fast-reroute
+tunnel mpls traffic-eng auto-bw
+
+end
+wr

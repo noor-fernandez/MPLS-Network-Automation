@@ -1,0 +1,62 @@
+#list of commands for setting up loop0 addresses on all switches
+and two routers
+for R1 commands:
+enable
+conf t
+int lo0
+ip add 1.1.1.1 255.255.255.255
+ip ospf 1 area 0
+exit
+int g0/0
+ip address 192.168.122.100
+no shut
+ip ospf 1 area 0
+exit
+int g0/1
+ip address 192.168.122.101
+no shut
+ip ospf 1 area 0
+exit
+int g0/2
+ip address 192.168.122.102
+R2 commands:
+enable
+conf t
+int lo0
+ip add 2.2.2.2 255.255.255.255
+ip ospf 1 area 0
+exit
+int g0/0
+ip address 192.168.122.102
+no shut
+ip ospf 1 area 0
+
+
+List of switches commands:
+S1
+enable
+conf t
+int lo0
+ip add 1.1.1.1 255.255.255.255
+ip ospf 1 area 0
+exit
+int g0/0
+ip address 192.168.122.110
+no shut
+ip ospf 1 area 0
+exit
+#AFTER CONFIGURING ALL THE INTERFACES ADD THE `end` command,  THEN `exit`
+S2
+enable
+conf t
+int lo0
+ip add 2.2.2.2 255.255.255.255
+ip ospf 1 area 0
+exit
+int g0/0
+ip address 192.168.122.120
+no shut
+ip ospf 1 area 0
+#PLEASE NOTE THAT EACH SWITCH WILL HAVE AN ADDRESS FAMILY OF 10
+#ADDRESSES FOR EXAMPLE S1 int g0/0 = ip address of 192.168.122.110,
+#int g0/1 = ip address of 192.168.122.111 UP TO 192.168.122.119

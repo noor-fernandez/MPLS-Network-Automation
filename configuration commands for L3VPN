@@ -1,0 +1,40 @@
+#for R1 and R3 write these commands for configuring an L3VPN
+ip vrf OFFICE1
+rd 4:4
+route-target both 4:4
+
+int f0/1
+ip vrf forwarding OFFICE1
+int f0/1
+ip address 192.168.1.1 255.255.255.0 #this is for R3 192.168.2.3
+ip ospf 2 area 2
+
+#after configuring vrfs please exit and save
+end
+wr
+#after this I will run a few check commands, only AFTER I have run these commands, put these commands in
+for R1 and R3
+
+# new script
+#now enter again and continue putting commands for R1 and R3
+conf t
+
+router bgp 1
+address-family ipv4 vrf OFFICE1
+redistribute ospf 2
+exit
+router ospf 2
+redistribute bgp 1 subnets
+end
+wr
+
+#######commands for enabling telnet on all routers
+line vty 0 10
+password cisco
+login
+logging synchronous
+exec-timeout 40
+exit
+enable password cisco
+end
+wr
