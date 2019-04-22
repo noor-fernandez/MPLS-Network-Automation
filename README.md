@@ -19,6 +19,7 @@ The necesary files can be [downloaded here](https://github.com/nortorious-flame8
   * `sudo apt-get update`
   * `sudo add-apt-repository ppa:webupd8team/atom`
   * `sudo apt-get install atom`
+  
 -To build up the GNS3 network images of routers, switches and automation containers must **legally** downloaded. David Bombal is an excellent educator that shows how to download those images. In particular, a linux automation container must be obtained in order to run the scripts directly using **Nano**, a popluar linux editor. Instructions for learning how to create nano files are in this [YouTube video](https://www.youtube.com/watch?v=gyKiDczLIZ4).
 
 ## License
