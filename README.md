@@ -7,8 +7,10 @@ The necesary files can be [downloaded here](https://github.com/nortorious-flame8
 
 ### Additional installations & Running the scripts
 -Other things this project requires is Python 3.x which can be [downloaded here](https://www.python.org/download/releases/3.0/). 
-  * Be sure to scroll down to the download tab of the webpage. 
+  * Be sure to scroll down to the download tab of the webpage.
+  
 -Unzip the files installed in the **download** section and save them all under the same directory. 
+
 -GNS3 stands for **Graphical Network Simulator 3** and, for Windows users, must be downloaded in a VM environment. GNS3 academy recommends **VMWare vSphere.** Please refer to [this link](https://docs.gns3.com/1Bn-s1Izkjp13HxcPF4b8QSGfkWJYG_dpMt9U1DQjvZ4/) for documentation on how to install and run GNS3 in a VM. Linux users (*Ubuntu in particular*) can run GNS3 natively. The following terminal commands will do the trick for Ubuntu 18.04. 
   * `sudo apt-get update`
   * `sudo apt-get upgrade` 
