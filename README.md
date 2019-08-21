@@ -3,7 +3,7 @@ This repository is a catch-all for the Python scripts and select router configur
 ## Instalation Instructions
 
 ### Download Files
-The necessary files can be [downloaded here](https://github.com/nortorious-flame89/MPLS-Network-Automation.git). 
+The necessary files are all included in the repository. 
 
 ### Additional installations & Running the scripts
 Other things this project requires is Python 3.x which can be [downloaded here](https://www.python.org/download/releases/3.0/). 
