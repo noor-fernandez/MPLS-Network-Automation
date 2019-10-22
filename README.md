@@ -2,7 +2,7 @@
 This repository is a catch-all for the Python scripts and select router configuration files needed to create GNS3 MPLS networks completed for my graduate thesis. It is only a snapshot of the various configurations for the simulated network devices that preceded the final simulated networks. This repository showcases the Python scripts used for network automation. Note that they are specific to GNS3 and that the Mininet automation scripts are **not** included here.
 ## Installation Instructions
 
-### Download Necesarry Files
+### Download Necessary Files
 The necessary files are all included in the repository. 
 
 ### Additional Installations 
