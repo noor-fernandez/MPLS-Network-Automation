@@ -22,7 +22,7 @@ Open and run the python files in your text editor (or IDE) of choice. If you'd l
   * `sudo add-apt-repository ppa:webupd8team/atom`
   * `sudo apt-get install atom`
 
-### Populating GNS3 Network & Running the Scripts
+## Populating GNS3 Network & Running the Scripts
 To populate the GNS3 MPLS network, images of routers, switches and automation containers, must be **legally** downloaded. David Bombal is an excellent educator that shows how to download those images [here](https://www.youtube.com/watch?v=oEP5eXftWJI). In particular, a Linux automation container must be obtained in order to run the scripts directly using **Nano**, a popluar Linux editor. Instructions for learning how to create Nano files are in this [YouTube video](https://www.youtube.com/watch?v=gyKiDczLIZ4).
 
 ## License
